@@ -1,12 +1,13 @@
 import React from "react";
 
-const Todo = ({task}) => {
+const Todo = ({task, toggleComplete, deleteTask }) => {
   return (
-    <div>
-      <p>{task.task}</p>
+    <div className="Todo">
+      <p className={`${task.completed ? "completed" : "incompleted"}`}
+      onClick={() => toggleComplete(task.id)}>{task.task}</p>
       <div>
         <button>edit</button>
-        <button>delete</button>
+        <button onClick={() => deleteTask(task.id)}>delete</button>
       </div>
     </div>
   );
