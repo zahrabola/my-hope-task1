@@ -16,7 +16,7 @@ const handleSubmit = event => {
     return (
         <div>
             <form className='TodoForm' onSubmit={handleSubmit}>
-                <input type='text' className='todoinput' value={value} onChange={(event) => setValue(event.target.value)} />
+                <input type='text' placeholder='Tasks for today' className='todoinput' value={value} onChange={(event) => setValue(event.target.value)} />
                 <button type='submit' className='todobtn'>Add todo</button>
             </form>
         </div>
