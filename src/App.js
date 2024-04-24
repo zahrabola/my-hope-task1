@@ -1,8 +1,6 @@
 ///import logo from './logo.svg';
 import './App.css';
 import TodoContainer from './Components/TodoContainer';
-import Todolist from './Components/Todolist';
-import { useState } from 'react';
 
 function App() {
   
@@ -11,7 +9,8 @@ function App() {
       <header className="App-header">
        Todo App
       </header>
-    <TodoContainer />
+      <TodoContainer /> 
+  
     </div>
   );
 }

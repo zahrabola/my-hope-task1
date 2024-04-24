@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 const TodoForm = ({addTodo}) => {
-    const [value, setValue] = useState("")
 
-    const handleSubmit = event => {
-        event.preventDefault()
+const [value, setValue] = useState("")
 
-        addTodo(value)
-         setValue("")
-         
-        console.log(value)
-    }
+const handleSubmit = event => {
+    event.preventDefault()
+
+    addTodo(value)
+    console.log(value)
+
+    setValue("")
+}
+
     return (
         <div>
-            <form className='todoform' onSubmit={handleSubmit}>
-                <input type='text' className='todoinput'
-              value={value}
-                onChange={(event) => console.log(event.target.value)}
-                />
-                <button type="submit" className='todobtn'>Add Task</button>
+            <form className='TodoForm' onSubmit={handleSubmit}>
+                <input type='text' className='todoinput' value={value} onChange={(event) => setValue(event.target.value)} />
+                <button type='submit' className='todobtn'>Add todo</button>
             </form>
         </div>
     );
